@@ -10,3 +10,7 @@ function menu() {
         menu.classList.remove("menu-top");
     }
 }
+
+function hautPage() {
+    document.documentElement.scrollTop = 0;
+}

@@ -1,0 +1,77 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.left, .right {
+    background: #fefefe;
+    color: #00a30b;
+    text-decoration: none;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    width: 380px;
+    height: 265px;
+    padding: 185px 35px 0px 35px;
+}
+
+.left {
+    right: 275px;
+}
+
+.right {
+    left: 275px;
+}
+
+#cv {
+    background: url("../res/fond-cv-gris.jpg") no-repeat;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+#cv:hover {
+    background: url("../res/fond-cv.jpg") no-repeat;
+    text-shadow: none;
+}
+
+#stage {
+    background: url("../res/fond-stage-gris.jpeg") no-repeat -75px;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+#stage:hover {
+    background: url("../res/fond-stage.jpeg") no-repeat -75px;
+    text-shadow: none;
+}
+
+#ppe {
+    background: url("../res/fond-ppe-gris.jpg") no-repeat;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+#ppe:hover {
+    background: url("../res/fond-ppe.jpg") no-repeat;
+    text-shadow: none;
+}
+
+#veille {
+    background: url("../res/fond-veille-gris.jpg") no-repeat;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+#veille:hover {
+    background: url("../res/fond-veille.jpg") no-repeat;
+    text-shadow: none;
+}
+
+#cv:hover span, #stage:hover span, #ppe:hover span, #veille:hover span {
+    background: rgba(75, 75, 75, 0.8);
+    display: block;
+    border-radius: 5px;
+}

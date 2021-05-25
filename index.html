@@ -12,15 +12,14 @@
     </head>
     <body onscroll="menu()">
         <header id="header">
-            <span id="haut_page"></span>
-            <video width="100%" height="350" autoplay muted loop id="myVideo">
+            <video width="100%" height="350" autoplay muted loop id="video_header">
                 <source src="res/background.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
             <h1>Mathieu Prot <br /> BTS SIO SLAM</h1>
             <nav>
                 <ul id="menu" class="menu-normal">
-                    <li><a href="index.html" id="en_cours">Accueil</a></li>
+                    <li><a href="index.html" class="en_cours">Accueil</a></li>
                     <li><a href="cv.html">CV</a></li>
                     <li><a href="stage-alternance.html">Stage - Alternance</a></li>
                     <li><a href="ppe.html">PPE</a></li>
@@ -28,6 +27,13 @@
                 </ul>
             </nav>
         </header>
-        <footer><a href="#haut_page"><img src="res/top_arrow.png" alt="Flèche blanche pointé vers le haut" id="top_arrow" />Retourner en haut</a></footer>
+        <section>
+            <p class="left">Bonjour et bienvenu sur mon portfolio, je suis actuellement en BTS SIO option développement (SLAM).</p>
+            <a href="cv.html" class="right" id="cv"><span>N'hésitez pas à aller voir mon CV afin d'avoir un aperçu de mon parcours et de mes compétences.</span></a>
+            <a href="stage-alternance.html" class="left" id="stage"><span>Vous pouvez également retrouver les stages et alternance que j'ai effectés au cours de mon BTS.</span></a>
+            <a href="ppe.html" class="right" id="ppe"><span>J'ai également réalisé plusieurs Projets Personnalisé Encadré (PPE), que je vous invite à aller voir.</span></a>
+            <a href="veille-techno.html" class="left" id="veille"><span>Enfin, vous pouvez retrouver la veille téchnologique que j'ai effectué durant mon BTS.</span></a>
+        </section>
+        <footer><a onclick="hautPage()"><img src="res/top_arrow.png" alt="Flèche blanche pointé vers le haut" id="top_arrow" />Retourner en haut</a></footer>
     </body>
 </html>

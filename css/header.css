@@ -5,17 +5,30 @@
     font-family: Roboto, sans-serif;
 }
 
+*::selection {
+    color: #ffffff;
+    background: #006006;
+}
+
+body {
+    background: #005005;
+}
+
+header {
+    margin-bottom: 6%;
+}
+
+#video_header {
+    object-fit: cover;
+    z-index: 1;
+}
+
 h1 {
     color: #ffffff;
     position: absolute;
     top: 12%;
     left: 44%;
     text-align: center;
-}
-
-#myVideo {
-    object-fit: cover;
-    z-index: 1;
 }
 
 #menu {
@@ -36,12 +49,13 @@ h1 {
 .menu-top {
     position: fixed;
     top: 0%;
+    z-index: 3;
     border-radius: 0px 0px 7px 7px;
     box-shadow: 2px 0px 10px #999999;
 }
 
 #menu li {
-    width: 9%;
+    width: 10%;
     text-align: center;
 }
 
@@ -55,7 +69,7 @@ h1 {
     padding: 5%;
 }
 
-#menu #en_cours {
+#menu .en_cours {
     background: #006e07;
     color: #ffffff;
 }
@@ -63,6 +77,7 @@ h1 {
 footer {
     background: #00a30b;
     text-align: center;
+    margin-top: 2%;
     padding: 0.5%;
     border-radius: 5px 5px 0px 0px;
 }
@@ -75,4 +90,5 @@ footer {
 footer a {
     text-decoration: none;
     color: #ffffff;
+    cursor: pointer;
 }

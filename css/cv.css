@@ -1,0 +1,44 @@
+section {
+    background: #ffffff;
+    width: 57%;
+    padding: 4%;
+    margin: auto;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+section p {
+    float: left;
+    margin-bottom: 7%;
+}
+
+#photo-profile {
+    width: 14%;
+    clear: both;
+    margin-left: 63%;
+    margin-bottom: 7%;
+}
+
+table {
+    color: #000000;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 1%;
+}
+
+th {
+    border-top: 2px solid;
+    font-size: 20px;
+    padding-top: 3%;
+}
+
+.annee {
+    width: 175px;
+}
+
+.derniere-ligne {
+    padding-bottom: 3%;
+}
