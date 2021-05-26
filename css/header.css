@@ -51,7 +51,7 @@ h1 {
     top: 0%;
     z-index: 3;
     border-radius: 0px 0px 7px 7px;
-    box-shadow: 2px 0px 10px #999999;
+    box-shadow: 2px 0px 10px #444444;
 }
 
 #menu li {
