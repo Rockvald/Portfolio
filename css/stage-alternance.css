@@ -27,8 +27,12 @@ figure {
     margin-top: 1%;
 }
 
-figure img {
+figure a {
     width: 33%;
+}
+
+figure img {
+    width: 100%;
 }
 
 figcaption {
