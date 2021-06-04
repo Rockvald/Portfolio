@@ -27,71 +27,82 @@
                 </ul>
             </nav>
         </header>
+        <aside>
+            <h3><a href="ppe.html#introduction">Introduction</a></h3>
+            <h3 class="titre_menu"><a href="ppe.html#application-web">L'application web</a></h3>
+            <a href="ppe.html#webapp-interface-utilisateur" class="sous_menu">Interface utilisateur</a>
+            <a href="ppe.html#webapp-interface-valideur" class="sous_menu">Interface valideur</a>
+            <a href="ppe.html#webapp-interface-administrateur" class="sous_menu">Interface administrateur</a>
+            <h3 class="titre_menu"><a href="ppe.html#application-mobile">L'application mobile</a></h3>
+            <a href="ppe.html#mobileapp-interface-utilisateur" class="sous_menu">Interface utilisateur</a>
+            <a href="ppe.html#mobileapp-interface-valideur" class="sous_menu">Interface valideur</a>
+            <a href="ppe.html#mobileapp-interface-administrateur" class="sous_menu">Interface administrateur</a>
+        </aside>
         <section>
             <p>
+                <span id="introduction" class="menu_page"></span>
                 <h2>Introduction</h2>
-                Au cours de mon BTS, j'ai été amené à réaliser plusieurs projets personnalisé encadré, j'ai notamment réaliser une application web ainsi que son adaptation pour téléphone portable.
+                Au cours de mon BTS, j'ai été amené à réaliser plusieurs projets personnalisés encadré, j'ai notamment réalisé une application web ainsi que son adaptation pour téléphone portable. J'ai également pu utiliser plusieurs langages de programmation, et étudier diverses technologies.
             </p>
             <p class="ppe">
+                <span id="application-web" class="menu_page"></span>
                 <h2>L'application web</h2>
-                L'application web correspond au PPE3, nous devions réaliser ce projet à quatre, cependant suite à une mauvaise coordination de notre groupe, chacun à réaliser sa partie de son côté, comme j'avais terminer la mienne en avance j'ai développer les autres parties de mon côté, j'ai ainsi presque entirèrement réaliser l'application seul. Il n'y a que les fonctionnalités de statistiques et de méssagerie que je n'ai pas eu le temps de réaliser.<br /><br />
+                L'application web correspond au PPE3, nous devions réaliser ce projet à quatre, cependant suite à une mauvaise coordination de notre groupe, chacun a réalisé sa partie de son côté, comme j'avais terminé la mienne en avance, j'ai développé les autres parties de mon côté, j'ai ainsi presque entièrement réaliser l'application seul. Il n'y a que les fonctionnalités de statistiques et de messagerie que je n'ai pas eu le temps de réaliser.<br /><br />
                 Nous avons choisi le sujet "CCI - Gestion des fournitures", qui consiste à développer une application web afin de simplifier la demande de matériel bureautique du personnel du Pôle Formation de la Chambre de Commerce et d’Industrie de Strasbourg et du Bas-Rhin.<br /><br />
                 Les utilisateurs de l’application pourront passer des commandes de fourniture, effectuer des demandes spécifiques, ainsi que suivre l’avancement des commandes et des demandes.<br />
-                Les administrateurs pourront créer des fournitures, envoyer un messages au utilisateurs, et modifier le statut d’une commande ou d’une demande.<br /><br />
-                Après avoir analysé le cahier des clauses, nous avons répartis les tâches selon la charge présente sur chaque pages demandé. J’ai pris en charge les pages accueil, inscription, connexion et demandes spécifiques.<br />
-                Nous avons ensuite réalisé le modèle entités-associations de la base de données que vous pouvez voir ci-dessous :
-                <a id="schema_ppe3" href="res/ppe3/schema-ppe3.png" target="_blank"><img src="res/ppe3/schema-ppe3.png" alt="Schéma entités associations" /></a>
+                Les administrateurs pourront créer des fournitures, envoyer un message aux utilisateurs, et modifier le statut d’une commande ou d’une demande.<br /><br />
+                Nous avons réalisé cette application avec le framework Laravel, qui utilise le Modèle Vue Controleur, celui-ci consiste à utiliser des vues pour le front-end (ce que les utilisateurs voient), et des controleurs pour le back-end (le traitement en arrière-plan que les utilisateurs ne voient pas), la liaison entre les deux se fait grâce aux routes. Nous avons utilisé les langages de programmation HTML, CSS, php, et JavaScript. Afin de faciliter la création des vues, j'ai également utilisé le modèle Blade de Laravel, qui permet de faciliter l'utilisation de php dans du HTML.<br /><br />
+                Après avoir analysé le cahier des clauses, nous avons réparti les tâches selon la charge présente sur chaque page demandée. J’ai pris en charge les pages accueil, inscription, connexion et demandes spécifiques. Nous avons ensuite réalisé le modèle entités-associations de la base de données que vous pouvez voir ci-dessous :<br /><br />
+                <a class="img_seul" href="res/ppe3/schema-ppe3.png" target="_blank"><img src="res/ppe3/schema-ppe3.png" alt="Schéma entités associations" /></a>
+                <br /><br /><br />
                 J'ai ensuite commencé par réaliser les pages de connexion et d'inscription, la connexion s'effectue avec l'adresse mail, et l'inscription permet de choisir sa catégorie (utilisateur ou valideur) et son service.<br />
                 <figure class="ppe3">
                     <a href="res/ppe3/connexion.png" target="_blank"><img src="res/ppe3/connexion.png" alt="Page de connexion" /></a>
                     <a href="res/ppe3/inscription.png" target="_blank"><img src="res/ppe3/inscription.png" alt="Page d'inscription" /></a>
-                </figure>
-                <br /><br />
-                Puis j'ai développer l'interface utilisateur, en commançant par la page d'accueil sur lequel on retrouve un entête avec la possibilité de rechercher une fourniture, ainsi que les commandes en cours de traitement, si il y en a. On retrouve également un pied de page avec l'historique des commandes terminé, là encore si il y en a. L'entête et le pied de page se retrouve sur toutes les pages.<br />
+                </figure><br /><br />
+                <span id="webapp-interface-utilisateur" class="menu_page"></span>
+                Puis j'ai développé l'interface utilisateur, en commençant par la page d'accueil sur lequel on retrouve un en-tête avec la possibilité de rechercher une fourniture, ainsi que les commandes en cours de traitement, s'il y en a. On retrouve également un pied de page avec l'historique des commandes terminé, là encore s'il y en a. L'en-tête et le pied de page se retrouvent sur toutes les pages.<br />
                 L'utilisateur aura également un message de l'administrateur, et une liste de 6 fournitures avec la possibilité de les commander.
                 <figure class="ppe3">
                     <a href="res/ppe3/utilisateur/accueil.png" target="_blank"><img src="res/ppe3/utilisateur/accueil.png" alt="Haut de la page d'accueil" /></a>
                     <a href="res/ppe3/utilisateur/accueil-bas.png" target="_blank"><img src="res/ppe3/utilisateur/accueil-bas.png" alt="Bas de la page d'accueil" /></a>
-                </figure>
-                <br /><br />
+                </figure><br /><br />
                 La page des départements permet de voir dans quel département l'utilisateur se trouve, ainsi que le nom, le prénom et l'adresse mail du valideur rattaché.<br />
                 La page des fournitures liste toutes les fournitures disponible et permet de passer commande, on retrouve également la possibilité de trié l'affichage par famille de fournitures.<br />
                 <figure class="ppe3">
                     <a href="res/ppe3/utilisateur/departements.png" target="_blank"><img src="res/ppe3/utilisateur/departements.png" alt="Page départements" /></a>
                     <a href="res/ppe3/utilisateur/fournitures.png" target="_blank"><img src="res/ppe3/utilisateur/fournitures.png" alt="Page fournitures" /></a>
-                </figure>
-                <br /><br />
-                La page des demandes spécifiques permet de réalisé des demandes de fournitures qui ne sont pas présente dans le catalogue, l'utilisateur doit indiquer le nom et la quantité de la fourniture souhaité, il peut également àjouté un lien, il retrouve égelement les demandes déjà effectué avec leur état.<br />
-                La page de suivi contient les commandes déjà passer avec leur état, avec la possibilité de trié l'affichage par état, ainsi que d'imprimer la liste.<br />
+                </figure><br /><br />
+                La page des demandes spécifiques permet de réaliser des demandes de fournitures qui ne sont pas présente dans le catalogue, l'utilisateur doit indiquer le nom et la quantité de la fourniture souhaité, il peut également ajouter un lien, il retrouve aussi les demandes déjà effectué avec leur état.<br />
+                La page de suivi contient les commandes déjà passées avec leur état, avec la possibilité de trié l'affichage par état, ainsi que d'imprimer la liste.<br />
                 <figure class="ppe3">
                     <a href="res/ppe3/utilisateur/demandes-specifiques.png" target="_blank"><img src="res/ppe3/utilisateur/demandes-specifiques.png" alt="Page des demandes spécifiques" /></a>
                     <a href="res/ppe3/utilisateur/suivi.png" target="_blank"><img src="res/ppe3/utilisateur/suivi.png" alt="Page de suivi des commandes" /></a>
-                </figure>
-                <br /><br />
-                La page de personnalisation du compte donne la possibilité à l'utilisateur de modifier les informations de son compte.<br />
-                <a id="perso_compte" href="res/ppe3/utilisateur/personnalisation-compte.png" target="_blank"><img src="res/ppe3/utilisateur/personnalisation-compte.png" alt="Page de personnalisation du compte" /></a>
-                J'ai ensuite réalisé l'interface valideur, qui est très similaire à celle des utilisateurs, seul les pages des demandes spécifiques et du suivi des commandes présentent des changement. Le valideur retrouve, respectivement, la liste des demandes et des commandes effectué par les utilisateurs de son service, avec la possibilité de validé les demandes et les commandes prise en compte.<br />
+                </figure><br /><br />
+                La page de personnalisation du compte donne la possibilité à l'utilisateur de modifier les informations de son compte.<br /><br />
+                <a class="img_seul" href="res/ppe3/utilisateur/personnalisation-compte.png" target="_blank"><img src="res/ppe3/utilisateur/personnalisation-compte.png" alt="Page de personnalisation du compte" /></a>
+                <br /><br /><br />
+                <span id="webapp-interface-valideur" class="menu_page"></span>
+                J'ai ensuite réalisé l'interface valideur, qui est très similaire à celle des utilisateurs, seul les pages des demandes spécifiques et du suivi des commandes présentent des changements. Le valideur retrouve, respectivement, la liste des demandes et des commandes effectué par les utilisateurs de son service, avec la possibilité de validé les demandes et les commandes prise en compte.<br />
                 <figure class="ppe3">
                     <a href="res/ppe3/valideur/demandes-specifiques.png" target="_blank"><img src="res/ppe3/valideur/demandes-specifiques.png" alt="Page des demandes spécifiques du valideur" /></a>
                     <a href="res/ppe3/valideur/suivi.png" target="_blank"><img src="res/ppe3/valideur/suivi.png" alt="Page du suivi des commandes du valideur" /></a>
-                </figure>
-                <br /><br />
-                Enfin j'ai réaliser l'interface administrateur. Sur la page d'acceuil, l'administrateur peut modifier ou supprimer le logo qui se trouve au dessus du menu, ainsi que sur les pages de connexion et d'inscription. Il peut également modifier le message qui s'affiche tous en haut de la page d'accueil. Il a ensuite une liste de tous les comptes créé, avec la possibilité de modifier le service d'un utilisateur, et de supprimer son message, Il peut également supprimer le message de tous les comptes. Enfin il a une liste de toutes les commandes en cours de traitement.<br />
+                </figure><br /><br />
+                <span id="webapp-interface-administrateur" class="menu_page"></span>
+                Enfin, j'ai réalisé l'interface administrateur. Sur la page d'accueil, l'administrateur peut modifier ou supprimer le logo qui se trouve au-dessus du menu, ainsi que sur les pages de connexion et d'inscription. Il peut également modifier le message qui s'affiche tout en haut de la page d'accueil. Il a ensuite une liste de tous les comptes créé, avec la possibilité de modifier le service d'un utilisateur, et de supprimer son message, il peut également supprimer le message de tous les comptes. Enfin, il a une liste de toutes les commandes en cours de traitement.<br />
                 <figure class="ppe3">
-                    <a href="res/ppe3/administrateur/accueil.png" target="_blank"><img src="res/ppe3/administrateur/accueil.png" alt="Haut de la page d'acceuil" /></a>
+                    <a href="res/ppe3/administrateur/accueil.png" target="_blank"><img src="res/ppe3/administrateur/accueil.png" alt="Haut de la page d'accueil" /></a>
                     <a href="res/ppe3/administrateur/accueil-bas.png" target="_blank"><img src="res/ppe3/administrateur/accueil-bas.png" alt="Bas de la page d'accueil" /></a>
-                </figure>
-                <br /><br />
+                </figure><br /><br />
                 La page des départements permet à l'administrateur de créer un nouveau département, mais aussi de modifier le valideur d'un département selon les utilisateurs du département concerné.<br />
-                La page des fournitures lui permet de créer une nouvelle fourniture et d'indiquer, si il le souhaite, la famille de celle-ci. Il peut également modifier la famille d'une fourniture existante, ainsi que mettre à jour sa quantité disponible.<br />
+                La page des fournitures lui permet de créer une nouvelle fourniture et d'indiquer, s'il le souhaite, la famille de celle-ci. Il peut également modifier la famille d'une fourniture existante, ainsi que mettre à jour sa quantité disponible.<br />
                 <figure class="ppe3">
                     <a href="res/ppe3/administrateur/departments.png" target="_blank"><img src="res/ppe3/administrateur/departments.png" alt="Page des départements de l'administrateur" /></a>
                     <a href="res/ppe3/administrateur/fournitures.png" target="_blank"><img src="res/ppe3/administrateur/fournitures.png" alt="Page des fournitures de l'administrateur" /></a>
-                </figure>
-                <br /><br />
-                La page des familles de fournitures permet de créer une nouvelle famille de fourniture, et contient la liste des familles existantes.
-                <a id="fam_fourn" href="res/ppe3/administrateur/familles-fournitures.png" target="_blank"><img src="res/ppe3/administrateur/familles-fournitures.png" alt="Page des familles de fournitures" /></a>
-                <br /><br />
+                </figure><br /><br />
+                La page des familles de fournitures permet de créer une nouvelle famille de fourniture, et contient la liste des familles existantes.<br /><br />
+                <a class="img_seul" href="res/ppe3/administrateur/familles-fournitures.png" target="_blank"><img src="res/ppe3/administrateur/familles-fournitures.png" alt="Page des familles de fournitures" /></a>
+                <br /><br /><br />
                 Les pages des demandes spécifiques et du suivi des commandes permettent, respectivement, de modifier l'état d'une demande et d'une commande validé ou en cours de traitement, avec la possibilité d'imprimer les demandes et les commandes.
                 <figure class="ppe3">
                     <a href="res/ppe3/administrateur/demandes-specifiques.png" target="_blank"><img src="res/ppe3/administrateur/demandes-specifiques.png" alt="Page des demandes spécifiques de l'administrateur" /></a>
@@ -99,59 +110,56 @@
                 </figure>
             </p>
             <p class="ppe">
+                <span id="application-mobile" class="menu_page"></span>
                 <h2>L'application mobile</h2>
-                L'application mobile correspond au PPE4, elle consiste à développer une version pour téléphone portable de l’application web réalisé dans le PPE3. J'ai été amené à réalisé l’API de l’application web, afin de pouvoir réutiliser les données de celle-ci. J'ai développer une application pour Ubuntu Touch, qui est l'adaptation d'Ubuntu (Linux) pour téléphone portable, et j'ai utilisé python pour le back-end.<br />
-                Les utilisateurs de l’application pourront passer des commandes de fourniture, et suivre l’avancement des commandes et des demandes.<br />
-                Les administrateurs pourront modifier le statut d’une commande ou d’une demande.<br />
-                J'ai tous d'abord commençé par effectué des recherches et me documenter sur le language qml, pour cela je me suis rapporté à la documentation d’ubuntu touch : <a href="https://phone.docs.ubuntu.com/en/apps/api-qml-current" id="lien_doc">https://phone.docs.ubuntu.com/en/apps/api-qml-current</a>.<br /><br />
-                La page de connexion est identique à celle de l'application web, avec une connexion utilisant l'adresse mail. On arrive ensuite sur la page d'accueil, dont l'entête contient un bouton pour ouvrir le menu en haut à gauche, et un bouton pour effectuer une recherche en haut à droite. L'entête est identique sur chaque page.<br />
-                Sur le menu on retrouve une bouton de retour en haut à gauche, et un bouton de déconnexion en haut à droite. La personne connecter a également un rappel de son service et sa catégorie tous en bas du menu.<br />
-                Sur la page d'accueil, on retrouve le message de l'administrateur, ainsi qu'une fourniture, généré aléatoirement à chaque arrivé sur la page, que l'on peut commander.<br />
+                L'application mobile correspond au PPE4, elle consiste à développer une version pour téléphone portable de l’application web réalisé dans le PPE3. J'ai été amené à réaliser l’API de l’application web, afin de pouvoir réutiliser les données de celle-ci. J'ai développé une application pour Ubuntu Touch, qui est l'adaptation d'Ubuntu (Linux) pour téléphone portable.<br />
+                Les utilisateurs de l’application pourront passer des commandes de fourniture, et suivre l’avancement des commandes et des demandes. Les administrateurs pourront modifier le statut d’une commande ou d’une demande.<br />
+                J'ai tout d'abord commencé par effectuer des recherches et me documenter sur le langage QML, pour cela, je me suis rapporté à la documentation d’ubuntu touch : <a href="https://phone.docs.ubuntu.com/en/apps/api-qml-current" target="_blank">https://phone.docs.ubuntu.com/en/apps/api-qml-current</a>. Pour réaliser cette application, j'ai également utilisé le système de méta construction Clickable, qui me permet de compiler, déployer et tester mon application, il propose aussi plusieurs modèles à la création d'une nouvelle application, et j'ai choisi le modèle configuré pour utilisé le langage QML pour le front-end (ce que les utilisateurs voient), et le langage Python pour le back-end (le traitement en arrière-plan que les utilisateurs ne voient pas). Je me suis aidé de la documentation officielle : <a href="https://clickable-ut.dev/en/latest/index.html" target="_blank">https://clickable-ut.dev/en/latest/index.html</a>.<br /><br />
+                <span id="mobileapp-interface-utilisateur" class="menu_page"></span>
+                La page de connexion est identique à celle de l'application web, avec une connexion utilisant l'adresse mail. On arrive ensuite sur la page d'accueil, dont l'en-tête contient un bouton pour ouvrir le menu en haut à gauche, et un bouton pour effectuer une recherche en haut à droite. L'en-tête est identique sur chaque page.<br />
+                Sur le menu, on retrouve un bouton de retour en haut à gauche, et un bouton de déconnexion en haut à droite. La personne connectée a également un rappel de son service et sa catégorie tout en bas du menu.<br />
+                Sur la page d'accueil, on retrouve le message de l'administrateur, ainsi qu'une fourniture, généré aléatoirement à chaque arrivée sur la page, que l'on peut commander.<br />
                 <figure class="ppe4">
                     <a href="res/ppe4/connexion.png" target="_blank"><img src="res/ppe4/connexion.png" alt="Page de connexion" /></a>
                     <a href="res/ppe4/menu.png" target="_blank"><img src="res/ppe4/menu.png" alt="Menu de l'application" /></a>
                     <a href="res/ppe4/accueil.png" target="_blank"><img src="res/ppe4/accueil.png" alt="Haut de la page d'accueil" /></a>
                     <a href="res/ppe4/accueil-bas.png" target="_blank"><img src="res/ppe4/accueil-bas.png" alt="Bas de la page d'accueil" /></a>
-                </figure>
-                <br /><br />
-                La page du département est identique à celle de l'application web. La page des fournitures présente une liste des fournitures disponible, on peut avoir le détail de chacune d'elle en cliquant dessus, le détail indique tous les informations de la fourniture et donne la possibilité de la commander.<br />
+                </figure><br /><br />
+                La page du département est identique à celle de l'application web. La page des fournitures présente une liste des fournitures disponible, on peut avoir le détail de chacune d'elle en cliquant dessus, le détail indique toutes les informations de la fourniture et donne la possibilité de la commander.<br />
                 <figure class="ppe4">
                     <a href="res/ppe4/departement.png" target="_blank"><img src="res/ppe4/departement.png" alt="Page du département" /></a>
                     <a href="res/ppe4/fourniture.png" target="_blank"><img src="res/ppe4/fourniture.png" alt="Page des fournitures" /></a>
                     <a href="res/ppe4/fourniture-detail.png" target="_blank"><img src="res/ppe4/fourniture-detail.png" alt="Détail d'une fourniture" /></a>
-                </figure>
-                <br /><br />
-                Les pages des demandes spécifiques et du suivi des commandes fonctionne sur le même principe que la page des fournitures, on retrouve d'abord une liste des demandes ou des commandes effectuer, puis on accèder au détails de chacune en cliquant dessus.<br />
+                </figure><br /><br />
+                Les pages des demandes spécifiques et du suivi des commandes fonctionne sur le même principe que la page des fournitures, on retrouve d'abord une liste des demandes ou des commandes effectuer, puis on accède aux détails de chacune en cliquant dessus.<br />
                 <figure class="ppe4">
                     <a href="res/ppe4/utilisateur/demandes-specifiques.png" target="_blank"><img src="res/ppe4/utilisateur/demandes-specifiques.png" alt="Page des demandes spécifiques" /></a>
                     <a href="res/ppe4/utilisateur/demandes-specifiques-detail.png" target="_blank"><img src="res/ppe4/utilisateur/demandes-specifiques-detail.png" alt="Détail d'une demandes" /></a>
                     <a href="res/ppe4/utilisateur/suivi.png" target="_blank"><img src="res/ppe4/utilisateur/suivi.png" alt="Pages du suivi des commandes" /></a>
                     <a href="res/ppe4/utilisateur/suivi-detail.png" target="_blank"><img src="res/ppe4/utilisateur/suivi-detail.png" alt="Détail d'une commande" /></a>
-                </figure>
-                <br /><br />
-                La page de personnalisation du compte est également identique à celle de l'application web. Après avoir cliqué sur le bouton de recherche, on a une boite dialogue qui s'ouvre et qui nous permet de lançer une recherche, on obtient ensuite le résultat sous forme de liste, avec la possibilité d'avoir le détail en cliquant sur la fourniture souhaité.
+                </figure><br /><br />
+                La page de personnalisation du compte est également identique à celle de l'application web. Après avoir cliqué sur le bouton de recherche, on a une boite dialogue qui s'ouvre et qui nous permet de lancer une recherche, on obtient ensuite le résultat sous forme de liste, avec la possibilité d'avoir le détail en cliquant sur la fourniture souhaitée.
                 <figure class="ppe4">
                     <a href="res/ppe4/personnalisation-compte.png" target="_blank"><img src="res/ppe4/personnalisation-compte.png" alt="Page de personnalisation du compte" /></a>
                     <a href="res/ppe4/recherche.png" target="_blank"><img src="res/ppe4/recherche.png" alt="Boite de dialogue de la recherche" /></a>
                     <a href="res/ppe4/recherche-resultat.png" target="_blank"><img src="res/ppe4/recherche-resultat.png" alt="Résultat d'une recherche" /></a>
                     <a href="res/ppe4/recherche-detail.png" target="_blank"><img src="res/ppe4/recherche-detail.png" alt="Détail d'un resultat" /></a>
-                </figure>
-                <br /><br />
-                L'interface valideur est presque identique à celle des utilisateurs, seule les pages des demandes spécifiques et du suivi des commandes présente des différences. La pages des demandes spécifiques donne d'abord les demandes effectué par le valideur, il peut ensuite accéder aux demandes des utilisateurs de son service grâce au menu de l'entête, il peut également avoir le détail de chaque demandes avec le nom et le prénom de la personne demandeur, ainsi que la possibilité de valider la demande si celle-ci a l'état "prise en compte".
+                </figure><br /><br />
+                <span id="mobileapp-interface-valideur" class="menu_page"></span>
+                L'interface valideur est presque identique à celle des utilisateurs, seule les pages des demandes spécifiques et du suivi des commandes présente des différences. La page des demandes spécifiques donne d'abord les demandes effectuées par le valideur, il peut ensuite accéder aux demandes des utilisateurs de son service grâce au menu de l'en-tête, il peut également avoir le détail de chaque demande avec le nom et le prénom de la personne demandeur, ainsi que la possibilité de valider la demande si celle-ci a l'état "prise en compte".
                 <figure class="ppe4">
                     <a href="res/ppe4/valideur/demandes-specifiques-pers.png" target="_blank"><img src="res/ppe4/valideur/demandes-specifiques-pers.png" alt="Page des demandes du valideur" /></a>
                     <a href="res/ppe4/valideur/demandes-specifiques-util.png" target="_blank"><img src="res/ppe4/valideur/demandes-specifiques-util.png" alt="Page des demandes des utilisateurs" /></a>
                     <a href="res/ppe4/valideur/demandes-specifiques-util-detail.png" target="_blank"><img src="res/ppe4/valideur/demandes-specifiques-util-detail.png" alt="Détail d'une demande" /></a>
-                </figure>
-                <br /><br />
+                </figure><br /><br />
                 La page du suivi des commandes de l'interface valideur repose sur le même principe que la page des demandes spécifiques, elle permet au valideur de gérer ses commandes et celles des utilisateurs de son service.
                 <figure class="ppe4">
                     <a href="res/ppe4/valideur/suivi-pers.png" target="_blank"><img src="res/ppe4/valideur/suivi-pers.png" alt="Page des commandes du valideur" /></a>
                     <a href="res/ppe4/valideur/suivi-util.png" target="_blank"><img src="res/ppe4/valideur/suivi-util.png" alt="Page des commandes utilisateurs" /></a>
                     <a href="res/ppe4/valideur/suivi-util-detail.png" target="_blank"><img src="res/ppe4/valideur/suivi-util-detail.png" alt="Détail d'une commande" /></a>
-                </figure>
-                <br /><br />
-                L'interface de l'administrateur est presque identique à celle du valideur, les seules différence sont que l'administrateurs voit toutes les demandes et les commandes, et qu'il peut passer une demande ou une commande à l'état "en cours", "livré", ou "annulé".
+                </figure><br /><br />
+                <span id="mobileapp-interface-administrateur" class="menu_page"></span>
+                L'interface de l'administrateur est presque identique à celle du valideur, les seules différences sont que l'administrateur voit toutes les demandes et les commandes, et qu'il peut passer une demande ou une commande à l'état "en cours", "livré", ou "annulé".
                 <figure class="ppe4">
                     <a href="res/ppe4/administrateur/demandes-specifiques-pers.png" target="_blank"><img src="res/ppe4/administrateur/demandes-specifiques-pers.png" alt="Page des demandes de l'administrateur" /></a>
                     <a href="res/ppe4/administrateur/demandes-specifiques-util.png" target="_blank"><img src="res/ppe4/administrateur/demandes-specifiques-util.png" alt="Page des demandes des utilisateurs" /></a>
